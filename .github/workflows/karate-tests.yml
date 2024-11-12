@@ -34,4 +34,4 @@ jobs:
         run: cd k-Api
 
       - name: Run Karate Tests
-        run: mvn test -Dkarate.options="classpath:features"
+        run: mvn -f k-Api/pom.xml test -Dkarate.options="classpath:examples/features"
