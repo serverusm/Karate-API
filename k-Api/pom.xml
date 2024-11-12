@@ -19,8 +19,6 @@
         <dependency>
             <groupId>io.karatelabs</groupId>
             <artifactId>karate-junit5</artifactId>
-            <groupId>com.intuit.karate</groupId>
-            <artifactId>karate-core</artifactId>
             <version>1.5.0</version>
             <scope>test</scope>
         </dependency>		
