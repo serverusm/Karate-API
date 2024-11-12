@@ -1,4 +1,22 @@
-Automatizacion usando Karate
+Automation Karate
+
+endpoint technical document
+https://gorest.co.in/
+
+Getting Started
+Dependencies
+* This tool require the follow tools to be executed
+* NodeJS V16
+
+Installing for desktop test cases
+* configuration meven 
+    * Environment variables configuration > system variables > path
+* have Java 8 or greater configuration
+* Install Yarn via npm
+```shell
+npm install --global yarn
+````
+```
 
 Run scenario
 
@@ -12,5 +30,4 @@ necesitamos pasar un parametro
 Run features
 ```shell
 mvn test -Dkarate.options="classpath:test/java/examples/features/crud-test.feature"
-
 ````
