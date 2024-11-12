@@ -32,3 +32,9 @@ Feature: CRUD Validaciones de API para usuarios
         And match response.name == 'PEdro MAmani'
         And match response.email == 'pedro.mamania@15ce.com'
         And match response.status == 'active'
+
+    @DeleteUser
+    Scenario: Eliminar un usuario existente
+        Given path 'users/7517794'
+        When method DELETE
+        Then status 204
