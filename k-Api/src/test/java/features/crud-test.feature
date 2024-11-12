@@ -19,7 +19,7 @@ Feature: CRUD Validaciones de API para usuarios
     @CreateUser
     Scenario: Create a new user
         Given path 'users'
-        And request { name: 'Tenali Ramakrishna', gender: 'male', email: 'tenali.ramakrishna@135ce.com', status: 'active' }
+        And request { name: 'Tenali Ramakrishna', gender: 'male', email: 'tenali.ramakrishna@145ce.com', status: 'active' }
         When method POST
         Then status 201
         And assert response.id != null
