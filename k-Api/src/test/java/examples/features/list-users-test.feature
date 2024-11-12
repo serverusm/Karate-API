@@ -10,7 +10,7 @@ Feature: List users
         And header Content-Type = 'application/json'
         When method GET
         Then status 200
-        And match response == '#[]' #get list
+        And match response == '#[]'
 
     Scenario: Validar la estructura un usuario
         Given path 'users'
