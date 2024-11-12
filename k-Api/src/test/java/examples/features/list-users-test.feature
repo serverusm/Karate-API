@@ -1,3 +1,4 @@
+@ListUsers
 Feature: List users
 
     Background:
