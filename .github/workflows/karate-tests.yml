@@ -27,5 +27,5 @@ jobs:
         run: mvn clean install
 
       - name: Run Karate Tests
-        working-directory: ./Karate-API/k-Api
+        working-directory: ./k-Api
         run: mvn test -Dkarate.options="classpath:src/test/java/features"
