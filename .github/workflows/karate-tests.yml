@@ -1,4 +1,4 @@
-name: Karate Tests
+name: Karate Tests Workflow
 
 on:
   push:
@@ -9,26 +9,22 @@ on:
       - main
 
 jobs:
-  run-karate-tests:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Check out repository
+      - name: Checkout code
         uses: actions/checkout@v2
 
       - name: Set up JDK 21
         uses: actions/setup-java@v2
         with:
-          distribution: 'temurin'
           java-version: '21'
 
-      - name: Cache Maven packages
-        uses: actions/cache@v2
-        with:
-          path: ~/.m2/repository
-          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
-          restore-keys: |
-            ${{ runner.os }}-maven
+      - name: Build with Maven
+        working-directory: ./Karate-API/k-Api
+        run: mvn clean install
 
       - name: Run Karate Tests
-        run: mvn test -Dkarate.options="classpath:examples/features"
+        working-directory: ./Karate-API/k-Api
+        run: mvn test -Dkarate.options="classpath:src/test/java/features"
