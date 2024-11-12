@@ -28,5 +28,8 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-maven
 
+      - name: Navigate to correct directory
+        run: cd k-Api
+
       - name: Run Karate Tests
         run: mvn test -Dkarate.options="classpath:examples/features"
