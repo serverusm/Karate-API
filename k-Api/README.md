@@ -25,5 +25,5 @@ necesitamos pasar un parametro
 
 Run features
 ```shell
-mvn test -Dkarate.options="classpath:test/java/examples/features/crud-test.feature"
+mvn test -Dkarate.options="classpath:features/crud-test.feature"
 ````
