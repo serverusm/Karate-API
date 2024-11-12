@@ -12,18 +12,14 @@ Installing for desktop test cases
 * configuration meven 
     * Environment variables configuration > system variables > path
 * have Java 8 or greater configuration
-* Install Yarn via npm
-```shell
-npm install --global yarn
-````
-```
+
 
 Run scenario
 
 ```shell
 mvn test -Dkarate.options="--tags @exampleTag"
 ````
-```
+
 necesitamos pasar un parametro
 - tags: tags de ejecucion @ListUsers, @CreateUser, @UpdateUser, @DeleteUser
 
