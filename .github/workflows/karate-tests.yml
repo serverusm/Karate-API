@@ -31,4 +31,4 @@ jobs:
             ${{ runner.os }}-maven
 
       - name: Run Karate Tests
-        run: mvn -f k-Api/pom.xml test -Dkarate.options="classpath:examples/features"
+        run: mvn test -Dkarate.options="classpath:examples/features"
