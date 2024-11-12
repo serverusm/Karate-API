@@ -19,7 +19,7 @@ Feature: CRUD Validaciones de API para usuarios
     @CreateUser
     Scenario: Create a new user
         Given path 'users'
-        And request { name: 'Tenali Ramakrishna', gender: 'male', email: 'tenali.ramakrishna@145ce.com', status: 'active' }
+        And request { name: 'Tenali Ramakrishna', gender: 'male', email: 'tenali.ramakrishna@155ce.com', status: 'active' }
         When method POST
         Then status 201
         And assert response.id != null
@@ -28,7 +28,7 @@ Feature: CRUD Validaciones de API para usuarios
 
     @UpdateUser
     Scenario: Update an user
-        Given path 'users/7517794'
+        Given path 'users/7519276'
         And request { name: 'Allasani Peddana', email: 'allasani.peddana@15ce.com', status: 'active' }
         When method PATCH
         Then status 200
@@ -37,6 +37,6 @@ Feature: CRUD Validaciones de API para usuarios
 
     @DeleteUser
     Scenario: Eliminar un usuario existente
-        Given path 'users/7517794'
+        Given path 'users/7519382'
         When method DELETE
         Then status 204
